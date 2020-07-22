@@ -38,3 +38,12 @@ Install the dependencies using brew so that we can navigate through source code 
 brew install pangomm
 brew install pkgconfig
 ```
+
+# Questions
+## Docker image
+1. Which docker image to use as our base?
+2. No need to install source code editing tools in production environment?
+
+## Fonts
+1. Which fonts we should install by default?
+2. There are too many fonts in the example here, we should remove the unuseful ones?
