@@ -19,14 +19,7 @@ docker run -it --name image-lib-docker-poc-test03 -v /users/<user>/image-lib-doc
 docker run -it --name image-lib-docker-poc-test04 -v /Users/wuzhanglin/Sources/POC/image-lib-on-docker-poc:/home/image-lib-docker-poc image-lib-poc:3.0 /bin/bash
 ```
 
-### Install libraries for navigating through third party sources
-Install the dependencies using brew so that we can navigate through source code of third party libraries.
-```
-brew install pangomm
-brew install pkgconfig
-```
-
-### Build and run C++ examples
+### Build and run C++ examples in docker
 ```
 cd /home/image-lib-docker-poc/examples/pangomm
 mkdir build
@@ -35,4 +28,13 @@ cd build
 g++ -g -Wall -o measure-text-pdf `pkg-config --cflags cairomm-1.0 pangomm-1.4` ../measure-text-pdf.cpp `pkg-config --libs cairomm-1.0 pangomm-1.4`
 
 ./measure-text-pdf "../measure-text-pdf-test-data.txt"
+```
+
+### Install libraries for navigating through third party sources on Mac
+This is just for improving developers' productivity on Mac wrting C++ in VS Code.
+
+Install the dependencies using brew so that we can navigate through source code of third party libraries.
+```
+brew install pangomm
+brew install pkgconfig
 ```
