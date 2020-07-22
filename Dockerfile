@@ -6,7 +6,7 @@
 # Question: Which docker image to use as our base?
 FROM node:latest
 
-WORKDIR /home
+WORKDIR /workspaces
 RUN apt-get update -y
 
 # Install basic development tools
