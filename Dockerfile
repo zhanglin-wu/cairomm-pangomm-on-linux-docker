@@ -11,7 +11,8 @@ RUN apt-get update -y
 
 # Install basic development tools
 # Question: No need to install in production environment?
-RUN apt-get install vim -y
+RUN apt-get install gdb -y
+# RUN apt-get install vim -y
 # RUN apt-get install git -y
 
 # Install third party libraries

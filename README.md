@@ -9,15 +9,17 @@ This contains some C++ example programs that use cairomm and pangomm. These prog
 We must install VS Code and docker first.
 
 #### Install extensions in VS Code
+
 - [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers), for connecting with a docker container
 - [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools), for editing and debugging C++ code
 
 #### Build and debug C++ program in docker
 1. In VS Code, go to "View > Command Palette...", enter "Remote-Containers: OpenFolder in Container..." and execute the command.
 2. Navigate to the folder of this repository in your local disk, and open it.
-3. If VS Code asks about how to get the docker image, just choose to use the Dockerfile. Now wait for VS Code to finish building the docker image, it will take a while.
-4. Go to "View > Terminal" to open the Terminal, and use the commands from section "[Build and run C++ examples in docker](https://github.com/zhanglin-wu/image-lib-on-docker-poc#build-and-run-c-examples-in-docker)" to build the program.
-5. Go to "View > Run" to open the debugger, select "measure-text-pdf", and then launch the program to start debugging.
+3. Now wait for VS Code to finish building the docker image, it will take a while. (Note if VS Code asks about how to build the docker image, just choose to use the Dockerfile.)
+4. Go to "View > Extentions" to install the "C/C++" extention in the docker container by clicking the "Install in Dev Container: Existing Dockerfile" button. We must reload VS Code after installing this extention, we can just click the "Reload Required" button.
+5. Go to "View > Terminal" to open the Terminal, and use the commands from section "[Build and run C++ examples in docker](https://github.com/zhanglin-wu/image-lib-on-docker-poc#build-and-run-c-examples-in-docker)" to build the program.
+6. Go to "View > Run" to open the debugger, select "measure-text-pdf", and then launch the program to start debugging.
 
 ### Use Terminal to build and run C++ program in docker
 #### Build and run docker image
