@@ -8,15 +8,13 @@ This contains some C++ example programs that use cairomm and pangomm. These prog
 
 #### Use VS Code to build and debug C++ program in docker
 
-##### Tools
+##### Prerequisites
 
-- Visual Studio Code
-- We must install VS Code and docker first.
+- [Docker](https://docs.docker.com/get-docker/)
+- [Visual Studio Code](https://code.visualstudio.com/)
 
-##### Install extensions in VS Code
-
-- [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers), for connecting with a docker container
-- [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools), for editing and debugging C++ code
+- [VS Code Extension: Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers), for connecting with a docker container
+- [VS Code Extension: C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools), for editing and debugging C++ code
 
 ##### Build and debug C++ program in docker
 
