@@ -4,7 +4,7 @@
 #
 
 # Question: Which docker image to use as our base?
-FROM node:latest
+FROM ubuntu:16.04
 
 WORKDIR /workspaces
 RUN apt-get update -y
