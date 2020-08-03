@@ -2,6 +2,11 @@
 
 This contains some C++ example programs that use cairomm and pangomm. These programs run in a Linux docker image.
 
+## What does the examples do?
+
+1. Cairomm examples can render circle, line, and reactagle into png and svg, and PDF.
+2. Pangomm examples can render unicode text like Latin letters, Chinese, Japanese, Emoji, and measure pixel size of text.
+
 ## Build and run
 
 ### Mac
@@ -72,7 +77,6 @@ brew install pkgconfig
 
 ### Docker image
 
-1. Which docker image to use as our base?
 2. No need to install source code editing tools in production environment?
 
 ### Fonts

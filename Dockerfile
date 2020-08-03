@@ -3,7 +3,6 @@
 # pangomm on Linux.
 #
 
-# Question: Which docker image to use as our base?
 FROM ubuntu:16.04
 
 WORKDIR /workspaces
