@@ -1,4 +1,4 @@
-# POC for Using Cairomm and Pangomm in Docker
+# Learning to use cairomm and pangomm in Linux docker container
 
 This contains some C++ example programs that use cairomm and pangomm. These programs run in a Linux docker image.
 
