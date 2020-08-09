@@ -110,4 +110,4 @@ SVG
 
 PDF
 
-![measure-text-pixel-size-pdf.pdf](README-resources/measure-text-pixel-size-pdf.pdf) 
+[measure-text-pixel-size-pdf.pdf](README-resources/measure-text-pixel-size-pdf.pdf) 
