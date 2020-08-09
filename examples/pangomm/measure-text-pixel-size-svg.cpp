@@ -1,15 +1,14 @@
 
-// measure-text-pdf.cpp
+// measure-text-pixel-size-svg.cpp
 //
 // To build on Linux:
 //   cd /path/to/folder-of-this-file
-//   mkdir build
-//   cd build
+//   mkdir -p build && cd build
 //
-//   g++ -g -Wall -o measure-text-pdf `pkg-config --cflags cairomm-1.0 pangomm-1.4` ../measure-text-pdf.cpp `pkg-config --libs cairomm-1.0 pangomm-1.4` && ./measure-text-pdf "../measure-text-pdf-test-data.txt" "Noto Sans Mono CJK TC"
+//   g++ -g -Wall -o measure-text-pixel-size-svg `pkg-config --cflags cairomm-1.0 pangomm-1.4` ../measure-text-pixel-size-svg.cpp `pkg-config --libs cairomm-1.0 pangomm-1.4` && ./measure-text-pixel-size-svg "../unicode-text.txt" "Noto Sans Mono CJK TC"
 //
 // To build on Mac:
-//   g++ -g -Wall -std=c++17 -o measure-text-pdf `pkg-config --cflags cairomm-1.0 pangomm-1.4` ../measure-text-pdf.cpp `pkg-config --libs cairomm-1.0 pangomm-1.4`
+//   g++ -g -Wall -std=c++17 -o measure-text-pixel-size-svg `pkg-config --cflags cairomm-1.0 pangomm-1.4` ../measure-text-pixel-size-svg.cpp `pkg-config --libs cairomm-1.0 pangomm-1.4`
 
 #include <sstream>
 #include <iostream>
@@ -46,11 +45,11 @@ int main(int argc, char** argv)
 
     Pango::init();
 
-    std::string filename = "measure-text.pdf";
+    std::string filename = "measure-text-pixel-size-svg.svg";
     int width = 600;
     int height = 800;
 
-    Cairo::RefPtr<Cairo::PdfSurface> surface = Cairo::PdfSurface::create(filename, width, height);
+    Cairo::RefPtr<Cairo::SvgSurface> surface = Cairo::SvgSurface::create(filename, width, height);
     Cairo::RefPtr<Cairo::Context> context = Cairo::Context::create(surface);
 
     context->move_to(0.0, 0.0);
@@ -79,8 +78,10 @@ int main(int argc, char** argv)
         layout->update_from_cairo_context(context);
         layout->show_in_cairo_context(context);
 
+        context->set_source_rgba(0.1, 0.1, 1.0, 0.7);
+
         std::stringstream sizeInfo;
-        sizeInfo << "The width and height of each line in pixel:" << std::endl;
+        sizeInfo << "The (width, height) of each above line in pixel:" << std::endl;
         auto lines = ReadLinesFromFile(filePath);
         for (const std::string& line : lines)
         {
@@ -103,7 +104,8 @@ int main(int argc, char** argv)
 
     // context->restore();
     context->show_page();
-    std::cout << "Wrote PDF file \"" << filename << "\"" << std::endl;
+
+    std::cout << "Wrote SVG file \"" << filename << "\"" << std::endl;
 
     return 0;
 }

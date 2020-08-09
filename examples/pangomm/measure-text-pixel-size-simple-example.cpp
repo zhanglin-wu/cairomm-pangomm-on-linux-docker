@@ -1,6 +1,7 @@
 
 // apt-get install libpangomm-1.4-dev -y
-// g++ -g -Wall -o measure-text-pixel-size `pkg-config --cflags cairomm-1.0 pangomm-1.4` measure-text-pixel-size.cpp `pkg-config --libs cairomm-1.0 pangomm-1.4`
+// mkdir -p build && cd build
+// g++ -g -Wall -o measure-text-pixel-size-simple-example `pkg-config --cflags cairomm-1.0 pangomm-1.4` ../measure-text-pixel-size-simple-example.cpp `pkg-config --libs cairomm-1.0 pangomm-1.4`
 
 
 #include <sstream>
@@ -59,7 +60,7 @@ int main() {
   layout->update_from_cairo_context(cr);
   layout->show_in_cairo_context(cr);
 
-  surf->write_to_png("measure-text-pixel-size.png");
+  surf->write_to_png("measure-text-pixel-size-simple-example.png");
 
   return 0;
 }
