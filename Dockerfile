@@ -9,17 +9,17 @@ WORKDIR /workspaces
 RUN apt-get update -y
 
 # Install basic development tools
-# Question: No need to install in production environment?
+# Note: No need to install them in production environment.
 RUN apt-get install gdb -y
 # RUN apt-get install vim -y
 # RUN apt-get install git -y
 
 # Install third party libraries
-# Note installing "pangomm" will install its dependency "cairomm" as well.
+# Note: Installing "pangomm" will install its dependency "cairomm" as well.
 RUN apt-get install pangomm-1.4 -y
 
 # Install fonts for unicode
-# TODO: There are too many fonts here, we should remove the unuseful ones?
+# TODO: There are too many fonts installed here, how do we remove the unuseful ones?
 COPY resources/fonts resources/fonts/
 RUN apt-get install fontconfig -y
 RUN cp -r resources/fonts/* /usr/share/fonts

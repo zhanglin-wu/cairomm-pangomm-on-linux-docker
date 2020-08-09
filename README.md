@@ -73,16 +73,20 @@ brew install pangomm
 brew install pkgconfig
 ```
 
+## Techincal Limitations
+
+1. Drawing ellipse with cairo
+   - Cairo doesn't support ellipse natively, we have to use a circle to model a ellipse by scalling differently between horizonal and vertical directions. But the problem is that the line width of the ellipse becomes different on horizonal and vertical directions.
+2. Drawing an embeded image
+   - Not sure how we can draw an embeded image, need to more research.
+
+
 ## Questions
-
-### Docker image
-
-2. No need to install source code editing tools in production environment?
 
 ### Fonts
 
-1. Which fonts we should install by default?
-2. There are too many fonts in the example here, we should remove the unuseful ones?
+1. Which fonts should we install by default?
+2. There are too many fonts installed for the examples here, how do we remove the unuseful ones?
 
 ## References
 
@@ -92,3 +96,18 @@ brew install pkgconfig
 - [VS Code: Developing inside a Container](https://code.visualstudio.com/docs/remote/containers)
 - [VS Code: Example of debugging C++ code in docker containers](https://github.com/microsoft/vscode-remote-try-cpp)
 
+## Gallery
+
+**Unicode texts and their pixel sizes, and some shapes**
+
+PNG
+
+![measure-text-pixel-size-png](README-resources/measure-text-pixel-size-png.png)
+
+SVG
+
+![measure-text-pixel-size-svg](README-resources/measure-text-pixel-size-svg.svg)
+
+PDF
+
+![measure-text-pixel-size-pdf.pdf](README-resources/measure-text-pixel-size-pdf.pdf) 
