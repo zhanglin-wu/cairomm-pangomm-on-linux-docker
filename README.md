@@ -74,8 +74,8 @@ brew install pkgconfig
 
 1. Drawing ellipse with cairo
    - Cairo doesn't support ellipse natively, we have to use a circle to model a ellipse by scalling differently between horizonal and vertical directions. But the problem is that the line width of the ellipse becomes different on horizonal and vertical directions.
-2. Drawing an embeded image
-   - Not sure how we can draw an embeded image, need to more research.
+2. Drawing an embedded image
+   - Not sure how we can draw an embedded image, need more research.
 
 
 ## Questions
