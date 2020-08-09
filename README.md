@@ -37,29 +37,26 @@ This contains some C++ example programs that use cairomm and pangomm to render s
 Run the Dockerfile to build the docker image so that we can compile and run the C++ example programs in it:
 
 ```
-docker build --tag image-lib-docker-poc:1.0 .
+docker build --tag cairomm-pangomm-on-linux-docker:1.0 .
 
-docker run -it --name image-lib-docker-poc-test -v /path/to/your-local-folder:/path/to/folder-in-docker-image image-lib-docker-poc:1.0 /bin/bash
+docker run -it --rm --name renderer-test -v /path/to/your-local-source-root:/path/to/your-work-directory-in-docker-container cairomm-pangomm-on-linux-docker:1.0 /bin/bash
 ```
 
-Here are some example command lines to run the image in docker:
+Here is an example command to run the image in docker:
 
 ```
-docker run -it --name image-lib-docker-poc-test03 -v /users/<user>/image-lib-docker-poc:/workspaces/image-lib-docker-poc image-lib-docker-poc:1.0 /bin/bash
-
-docker run -it --name image-lib-docker-poc-test04 -v /Users/wuzhanglin/Sources/POC/image-lib-on-docker-poc:/workspaces/image-lib-docker-poc image-lib-poc:3.0 /bin/bash
+docker run -it --rm --name renderer-test -v /users/<user>/repositories/cairomm-pangomm-on-linux-docker:/workspaces/cairomm-pangomm-on-linux-docker cairomm-pangomm-on-linux-docker:1.0 /bin/bash
 ```
 
-##### Build and run C++ examples in docker
+##### Build and run C++ examples in docker container
 
 ```
-cd /workspaces/image-lib-docker-poc/examples/pangomm
-mkdir build
-cd build
+cd /workspaces/cairomm-pangomm-on-linux-docker/examples/pangomm
+mkdir -p build && cd build
 
-g++ -g -Wall -o measure-text-pdf `pkg-config --cflags cairomm-1.0 pangomm-1.4` ../measure-text-pdf.cpp `pkg-config --libs cairomm-1.0 pangomm-1.4`
+g++ -g -Wall -o measure-text-pixel-size-pdf `pkg-config --cflags cairomm-1.0 pangomm-1.4` ../measure-text-pixel-size-pdf.cpp `pkg-config --libs cairomm-1.0 pangomm-1.4`
 
-./measure-text-pdf "../measure-text-pdf-test-data.txt"
+./measure-text-pixel-size-pdf "../unicode-text.txt" "Noto Sans Mono CJK TC"
 ```
 
 ##### Optional: Install third party libraries on Mac for source navigation
