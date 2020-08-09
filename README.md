@@ -1,6 +1,6 @@
 # Learning to use cairomm and pangomm in Linux docker container
 
-This contains some C++ example programs that use cairomm and pangomm to render shapes and unicode text into images and PDF, and measure the pixel size of unicode text. These programs run in a Linux docker image.
+This contains some C++ example programs that use cairomm and pangomm to render shapes and unicode text into images and PDF, and measure the pixel size of unicode text. These programs run in a Linux docker container.
 
 ## What does the examples do?
 
