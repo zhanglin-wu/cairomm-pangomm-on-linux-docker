@@ -5,11 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "measure-text-pdf",
+            "name": "measure-text-pixel-size-pdf",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/examples/pangomm/build/measure-text-pdf",
-            "args": ["../measure-text-pdf-test-data.txt", "Noto Sans Mono CJK TC"],
+            "program": "${workspaceFolder}/examples/pangomm/build/measure-text-pixel-size-pdf",
+            "args": ["../unicode-text.txt", "Noto Sans Mono CJK TC"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}/examples/pangomm/build",
             "environment": [],
