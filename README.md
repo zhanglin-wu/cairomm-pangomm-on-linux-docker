@@ -9,9 +9,9 @@ This contains some C++ example programs that use cairomm and pangomm to render s
 
 ## Build and run
 
-### Mac
+### macOS
 
-#### Use VS Code to build and debug C++ program in docker
+#### Use VS Code to build and debug C++ program in docker (Windows/macOS/Linux)
 
 ##### Prerequisites
 
