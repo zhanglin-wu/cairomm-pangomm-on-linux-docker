@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+# Build outputs
+**/build-mac/
+**/build/

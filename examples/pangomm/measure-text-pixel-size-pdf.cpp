@@ -16,17 +16,16 @@
 #include <fstream>
 #include <vector>
 #include <tuple>
+#include <string>
 
 #include <glibmm.h>
-#include <string>
+#include <cairomm/cairomm.h>
+
 #include <pangomm.h>
 #include <pangomm/fontdescription.h>
+#include <pangomm/init.h>
 #include <pangomm/item.h>
 #include <pangomm/glyphstring.h>
-
-#include <cairomm/cairomm.h>
-#include <pangomm.h>
-#include <pangomm/init.h>
 
 static const double fontSize = 10000;
 
